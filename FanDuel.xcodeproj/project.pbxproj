@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		560AC9732062C32800BF7769 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AC9722062C32800BF7769 /* AppDelegate.swift */; };
+		560AC9782062C32800BF7769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560AC9762062C32800BF7769 /* Main.storyboard */; };
+		560AC97A2062C32800BF7769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 560AC9792062C32800BF7769 /* Assets.xcassets */; };
+		560AC97D2062C32800BF7769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 560AC97B2062C32800BF7769 /* LaunchScreen.storyboard */; };
+		560AC9882062C32800BF7769 /* FanDuelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AC9872062C32800BF7769 /* FanDuelTests.swift */; };
+		560AC9932062C32800BF7769 /* FanDuelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AC9922062C32800BF7769 /* FanDuelUITests.swift */; };
+		560AC9A12062C8A700BF7769 /* ContainerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AC9A02062C8A700BF7769 /* ContainerCollectionViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		560AC9842062C32800BF7769 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 560AC9672062C32800BF7769 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 560AC96E2062C32800BF7769;
+			remoteInfo = FanDuel;
+		};
+		560AC98F2062C32800BF7769 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 560AC9672062C32800BF7769 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 560AC96E2062C32800BF7769;
+			remoteInfo = FanDuel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		560AC96F2062C32800BF7769 /* FanDuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FanDuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		560AC9722062C32800BF7769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		560AC9772062C32800BF7769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		560AC9792062C32800BF7769 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		560AC97C2062C32800BF7769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		560AC97E2062C32800BF7769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		560AC9832062C32800BF7769 /* FanDuelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FanDuelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		560AC9872062C32800BF7769 /* FanDuelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanDuelTests.swift; sourceTree = "<group>"; };
+		560AC9892062C32800BF7769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		560AC98E2062C32800BF7769 /* FanDuelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FanDuelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		560AC9922062C32800BF7769 /* FanDuelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanDuelUITests.swift; sourceTree = "<group>"; };
+		560AC9942062C32800BF7769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		560AC9A02062C8A700BF7769 /* ContainerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerCollectionViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		560AC96C2062C32800BF7769 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		560AC9802062C32800BF7769 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		560AC98B2062C32800BF7769 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		560AC9662062C32800BF7769 = {
+			isa = PBXGroup;
+			children = (
+				560AC9712062C32800BF7769 /* FanDuel */,
+				560AC9862062C32800BF7769 /* FanDuelTests */,
+				560AC9912062C32800BF7769 /* FanDuelUITests */,
+				560AC9702062C32800BF7769 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		560AC9702062C32800BF7769 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				560AC96F2062C32800BF7769 /* FanDuel.app */,
+				560AC9832062C32800BF7769 /* FanDuelTests.xctest */,
+				560AC98E2062C32800BF7769 /* FanDuelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		560AC9712062C32800BF7769 /* FanDuel */ = {
+			isa = PBXGroup;
+			children = (
+				560AC9722062C32800BF7769 /* AppDelegate.swift */,
+				560AC9A02062C8A700BF7769 /* ContainerCollectionViewController.swift */,
+				560AC9762062C32800BF7769 /* Main.storyboard */,
+				560AC9792062C32800BF7769 /* Assets.xcassets */,
+				560AC97B2062C32800BF7769 /* LaunchScreen.storyboard */,
+				560AC97E2062C32800BF7769 /* Info.plist */,
+			);
+			path = FanDuel;
+			sourceTree = "<group>";
+		};
+		560AC9862062C32800BF7769 /* FanDuelTests */ = {
+			isa = PBXGroup;
+			children = (
+				560AC9872062C32800BF7769 /* FanDuelTests.swift */,
+				560AC9892062C32800BF7769 /* Info.plist */,
+			);
+			path = FanDuelTests;
+			sourceTree = "<group>";
+		};
+		560AC9912062C32800BF7769 /* FanDuelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				560AC9922062C32800BF7769 /* FanDuelUITests.swift */,
+				560AC9942062C32800BF7769 /* Info.plist */,
+			);
+			path = FanDuelUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		560AC96E2062C32800BF7769 /* FanDuel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 560AC9972062C32800BF7769 /* Build configuration list for PBXNativeTarget "FanDuel" */;
+			buildPhases = (
+				560AC96B2062C32800BF7769 /* Sources */,
+				560AC96C2062C32800BF7769 /* Frameworks */,
+				560AC96D2062C32800BF7769 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FanDuel;
+			productName = FanDuel;
+			productReference = 560AC96F2062C32800BF7769 /* FanDuel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		560AC9822062C32800BF7769 /* FanDuelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 560AC99A2062C32800BF7769 /* Build configuration list for PBXNativeTarget "FanDuelTests" */;
+			buildPhases = (
+				560AC97F2062C32800BF7769 /* Sources */,
+				560AC9802062C32800BF7769 /* Frameworks */,
+				560AC9812062C32800BF7769 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				560AC9852062C32800BF7769 /* PBXTargetDependency */,
+			);
+			name = FanDuelTests;
+			productName = FanDuelTests;
+			productReference = 560AC9832062C32800BF7769 /* FanDuelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		560AC98D2062C32800BF7769 /* FanDuelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 560AC99D2062C32800BF7769 /* Build configuration list for PBXNativeTarget "FanDuelUITests" */;
+			buildPhases = (
+				560AC98A2062C32800BF7769 /* Sources */,
+				560AC98B2062C32800BF7769 /* Frameworks */,
+				560AC98C2062C32800BF7769 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				560AC9902062C32800BF7769 /* PBXTargetDependency */,
+			);
+			name = FanDuelUITests;
+			productName = FanDuelUITests;
+			productReference = 560AC98E2062C32800BF7769 /* FanDuelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		560AC9672062C32800BF7769 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Daniel No";
+				TargetAttributes = {
+					560AC96E2062C32800BF7769 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					560AC9822062C32800BF7769 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 560AC96E2062C32800BF7769;
+					};
+					560AC98D2062C32800BF7769 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 560AC96E2062C32800BF7769;
+					};
+				};
+			};
+			buildConfigurationList = 560AC96A2062C32800BF7769 /* Build configuration list for PBXProject "FanDuel" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 560AC9662062C32800BF7769;
+			productRefGroup = 560AC9702062C32800BF7769 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				560AC96E2062C32800BF7769 /* FanDuel */,
+				560AC9822062C32800BF7769 /* FanDuelTests */,
+				560AC98D2062C32800BF7769 /* FanDuelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		560AC96D2062C32800BF7769 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				560AC97D2062C32800BF7769 /* LaunchScreen.storyboard in Resources */,
+				560AC97A2062C32800BF7769 /* Assets.xcassets in Resources */,
+				560AC9782062C32800BF7769 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		560AC9812062C32800BF7769 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		560AC98C2062C32800BF7769 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		560AC96B2062C32800BF7769 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				560AC9A12062C8A700BF7769 /* ContainerCollectionViewController.swift in Sources */,
+				560AC9732062C32800BF7769 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		560AC97F2062C32800BF7769 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				560AC9882062C32800BF7769 /* FanDuelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		560AC98A2062C32800BF7769 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				560AC9932062C32800BF7769 /* FanDuelUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		560AC9852062C32800BF7769 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 560AC96E2062C32800BF7769 /* FanDuel */;
+			targetProxy = 560AC9842062C32800BF7769 /* PBXContainerItemProxy */;
+		};
+		560AC9902062C32800BF7769 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 560AC96E2062C32800BF7769 /* FanDuel */;
+			targetProxy = 560AC98F2062C32800BF7769 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		560AC9762062C32800BF7769 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				560AC9772062C32800BF7769 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		560AC97B2062C32800BF7769 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				560AC97C2062C32800BF7769 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		560AC9952062C32800BF7769 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		560AC9962062C32800BF7769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		560AC9982062C32800BF7769 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FanDuel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = d.FanDuel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		560AC9992062C32800BF7769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FanDuel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = d.FanDuel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		560AC99B2062C32800BF7769 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FanDuelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = d.FanDuelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FanDuel.app/FanDuel";
+			};
+			name = Debug;
+		};
+		560AC99C2062C32800BF7769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FanDuelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = d.FanDuelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FanDuel.app/FanDuel";
+			};
+			name = Release;
+		};
+		560AC99E2062C32800BF7769 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FanDuelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = d.FanDuelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FanDuel;
+			};
+			name = Debug;
+		};
+		560AC99F2062C32800BF7769 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FanDuelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = d.FanDuelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FanDuel;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		560AC96A2062C32800BF7769 /* Build configuration list for PBXProject "FanDuel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				560AC9952062C32800BF7769 /* Debug */,
+				560AC9962062C32800BF7769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		560AC9972062C32800BF7769 /* Build configuration list for PBXNativeTarget "FanDuel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				560AC9982062C32800BF7769 /* Debug */,
+				560AC9992062C32800BF7769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		560AC99A2062C32800BF7769 /* Build configuration list for PBXNativeTarget "FanDuelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				560AC99B2062C32800BF7769 /* Debug */,
+				560AC99C2062C32800BF7769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		560AC99D2062C32800BF7769 /* Build configuration list for PBXNativeTarget "FanDuelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				560AC99E2062C32800BF7769 /* Debug */,
+				560AC99F2062C32800BF7769 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 560AC9672062C32800BF7769 /* Project object */;
+}
