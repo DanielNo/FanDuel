@@ -24,6 +24,7 @@
 		560AC9B22062F0F700BF7769 /* StatsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AC9B12062F0F700BF7769 /* StatsTableViewDataSource.swift */; };
 		560AC9B820630ED800BF7769 /* basketballData.json in Resources */ = {isa = PBXBuildFile; fileRef = 560AC9B720630ED800BF7769 /* basketballData.json */; };
 		560AC9BA20630EF600BF7769 /* BasketballData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AC9B920630EF500BF7769 /* BasketballData.swift */; };
+		563DE9952064528600F7A207 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563DE9942064528500F7A207 /* TriangleView.swift */; };
 		56CF52C62064220100598326 /* FileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF52C52064220100598326 /* FileParser.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		560AC9B12062F0F700BF7769 /* StatsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTableViewDataSource.swift; sourceTree = "<group>"; };
 		560AC9B720630ED800BF7769 /* basketballData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = basketballData.json; sourceTree = "<group>"; };
 		560AC9B920630EF500BF7769 /* BasketballData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballData.swift; sourceTree = "<group>"; };
+		563DE9942064528500F7A207 /* TriangleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 		56CF52C52064220100598326 /* FileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 		560AC9B02062ED0800BF7769 /* UI Components */ = {
 			isa = PBXGroup;
 			children = (
+				563DE9942064528500F7A207 /* TriangleView.swift */,
 				560AC9B62062F85C00BF7769 /* DataSources */,
 				560AC9B32062F81600BF7769 /* CollectionViewCells */,
 				560AC9B42062F81E00BF7769 /* TableViewCells */,
@@ -336,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				563DE9952064528600F7A207 /* TriangleView.swift in Sources */,
 				560AC9A72062EA6300BF7769 /* GamesTableViewDataSource.swift in Sources */,
 				560AC9AE2062EC9300BF7769 /* StatsTableViewCell.swift in Sources */,
 				560AC9A42062DE7000BF7769 /* ListCollectionViewCell.swift in Sources */,
