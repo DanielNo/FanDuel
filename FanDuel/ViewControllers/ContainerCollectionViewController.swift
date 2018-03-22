@@ -29,6 +29,8 @@ class ContainerCollectionViewController: UIViewController, UICollectionViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let parser = FileParser()
+        let basketballData = parser.readFile(fileName: "basketballData", extension: "json")
     }
 }
 

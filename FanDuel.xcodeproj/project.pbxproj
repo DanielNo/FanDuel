@@ -22,6 +22,9 @@
 		560AC9AE2062EC9300BF7769 /* StatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AC9AC2062EC9200BF7769 /* StatsTableViewCell.swift */; };
 		560AC9AF2062EC9300BF7769 /* StatsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 560AC9AD2062EC9200BF7769 /* StatsTableViewCell.xib */; };
 		560AC9B22062F0F700BF7769 /* StatsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AC9B12062F0F700BF7769 /* StatsTableViewDataSource.swift */; };
+		560AC9B820630ED800BF7769 /* basketballData.json in Resources */ = {isa = PBXBuildFile; fileRef = 560AC9B720630ED800BF7769 /* basketballData.json */; };
+		560AC9BA20630EF600BF7769 /* BasketballData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AC9B920630EF500BF7769 /* BasketballData.swift */; };
+		56CF52C62064220100598326 /* FileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF52C52064220100598326 /* FileParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		560AC9AC2062EC9200BF7769 /* StatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTableViewCell.swift; sourceTree = "<group>"; };
 		560AC9AD2062EC9200BF7769 /* StatsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatsTableViewCell.xib; sourceTree = "<group>"; };
 		560AC9B12062F0F700BF7769 /* StatsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTableViewDataSource.swift; sourceTree = "<group>"; };
+		560AC9B720630ED800BF7769 /* basketballData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = basketballData.json; sourceTree = "<group>"; };
+		560AC9B920630EF500BF7769 /* BasketballData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballData.swift; sourceTree = "<group>"; };
+		56CF52C52064220100598326 /* FileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +123,10 @@
 				560AC9B02062ED0800BF7769 /* UI Components */,
 				560AC9722062C32800BF7769 /* AppDelegate.swift */,
 				560AC9762062C32800BF7769 /* Main.storyboard */,
+				56CF52C52064220100598326 /* FileParser.swift */,
+				560AC9B920630EF500BF7769 /* BasketballData.swift */,
 				560AC9792062C32800BF7769 /* Assets.xcassets */,
+				560AC9B720630ED800BF7769 /* basketballData.json */,
 				560AC97B2062C32800BF7769 /* LaunchScreen.storyboard */,
 				560AC97E2062C32800BF7769 /* Info.plist */,
 			);
@@ -299,6 +308,7 @@
 				560AC97D2062C32800BF7769 /* LaunchScreen.storyboard in Resources */,
 				560AC9AB2062EC8700BF7769 /* GamesTableViewCell.xib in Resources */,
 				560AC97A2062C32800BF7769 /* Assets.xcassets in Resources */,
+				560AC9B820630ED800BF7769 /* basketballData.json in Resources */,
 				560AC9AF2062EC9300BF7769 /* StatsTableViewCell.xib in Resources */,
 				560AC9A52062DE7000BF7769 /* ListCollectionViewCell.xib in Resources */,
 				560AC9782062C32800BF7769 /* Main.storyboard in Resources */,
@@ -330,8 +340,10 @@
 				560AC9AE2062EC9300BF7769 /* StatsTableViewCell.swift in Sources */,
 				560AC9A42062DE7000BF7769 /* ListCollectionViewCell.swift in Sources */,
 				560AC9A12062C8A700BF7769 /* ContainerCollectionViewController.swift in Sources */,
+				56CF52C62064220100598326 /* FileParser.swift in Sources */,
 				560AC9B22062F0F700BF7769 /* StatsTableViewDataSource.swift in Sources */,
 				560AC9AA2062EC8700BF7769 /* GamesTableViewCell.swift in Sources */,
+				560AC9BA20630EF600BF7769 /* BasketballData.swift in Sources */,
 				560AC9732062C32800BF7769 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
