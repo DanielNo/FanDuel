@@ -10,7 +10,9 @@ import Foundation
 
 public class FileParser{
     
-    let jsonDecoder : JSONDecoder = JSONDecoder()
+    lazy var jsonDecoder : JSONDecoder = {
+        return JSONDecoder()
+    }()
     
     func readFile(fileName: String, extension: String, completion: @escaping (BasketballData?) -> Void) {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {

@@ -11,11 +11,17 @@ import UIKit
 
 class GamesTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate
 {
-    let data = [1,2,3,4,5]
+    var basketballData : BasketballData?
     let gamesCellReuseID = "gamesCell"
-    
+    init(_ basketballData : BasketballData) {
+        self.basketballData = basketballData
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        guard let games = basketballData?.games else{
+         return 0
+        }
+        return games.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

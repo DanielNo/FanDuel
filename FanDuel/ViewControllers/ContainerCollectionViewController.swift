@@ -13,6 +13,7 @@ enum ContainerSection : Int{
 }
 
 class ContainerCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    let listCellReuseID = "listCell"
     @IBOutlet weak var segmentedControl: UISegmentedControl!{
         didSet{
             segmentedControl.addTarget(self, action: #selector(segmentedControlChanged(segControl:)), for: UIControlEvents.valueChanged)
@@ -27,19 +28,36 @@ class ContainerCollectionViewController: UIViewController, UICollectionViewDeleg
         }
     }
     
-    let listCellReuseID = "listCell"
-    lazy var gamesDataSource = GamesTableViewDataSource()
-    lazy var statsDataSource = StatsTableViewDataSource()
+    var data : BasketballData? {
+        willSet{
+            if let basketballData = newValue{
+                self.gamesDataSource = GamesTableViewDataSource(basketballData)
+                self.statsDataSource = StatsTableViewDataSource(basketballData)
+            }
+        }
+    }
+    var gamesDataSource : GamesTableViewDataSource?
+    var statsDataSource : StatsTableViewDataSource?
+    let fileParser = FileParser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let parser = FileParser()
-        let basketballData = parser.readFile(fileName: "basketballData", extension: "json") { (data) in
-            print(data?.teams)
+        self.loadData()
+    }
+    
+    func loadData(){
+        fileParser.readFile(fileName: "basketballData", extension: "json") { [weak self](data) in
+            guard let jsonData = data else{
+                return
+            }
+            self?.data = jsonData
         }
     }
     
     @objc func segmentedControlChanged(segControl : UISegmentedControl){
+        guard self.data != nil else{
+            return
+        }
         let index = segControl.selectedSegmentIndex
         switch index {
         case 0:
@@ -59,10 +77,9 @@ class ContainerCollectionViewController: UIViewController, UICollectionViewDeleg
 }
 
 extension ContainerCollectionViewController{
-    
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        let sections = (self.data == nil) ? 0 : 2
+        return sections
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -74,16 +91,17 @@ extension ContainerCollectionViewController{
         let section = ContainerSection(rawValue: indexPath.section)!
         switch section {
         case ContainerSection.gamesSection:
-            cell.tableView.backgroundColor = UIColor.blue
-            cell.tableView.delegate = gamesDataSource
-            cell.tableView.dataSource = gamesDataSource
-            cell.tableView.register(UINib(nibName: "GamesTableViewCell", bundle: nil), forCellReuseIdentifier: gamesDataSource.gamesCellReuseID)
+            if let gamesDelegate = gamesDataSource{
+                cell.tableView.delegate = gamesDelegate
+                cell.tableView.dataSource = gamesDelegate
+                cell.tableView.register(UINib(nibName: "GamesTableViewCell", bundle: nil), forCellReuseIdentifier: gamesDelegate.gamesCellReuseID)
+            }
         case ContainerSection.statsSection:
-            
-            cell.tableView.backgroundColor = UIColor.red
-            cell.tableView.delegate = statsDataSource
-            cell.tableView.dataSource = statsDataSource
-            cell.tableView.register(UINib(nibName: "StatsTableViewCell", bundle: nil), forCellReuseIdentifier: statsDataSource.statsCellReuseID)
+            if let statsDelegate = statsDataSource{
+                cell.tableView.delegate = statsDelegate
+                cell.tableView.dataSource = statsDelegate
+                cell.tableView.register(UINib(nibName: "StatsTableViewCell", bundle: nil), forCellReuseIdentifier: statsDelegate.statsCellReuseID)
+            }
         default:
             assert(false, "invalid collectionview section")
         }

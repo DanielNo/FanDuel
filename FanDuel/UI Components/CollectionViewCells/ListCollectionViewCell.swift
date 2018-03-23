@@ -25,19 +25,19 @@ class ListCollectionViewCell: UICollectionViewCell {
 
     }
     
-    public func configureForList(listType : Int){
-        switch listType {
-        case 0:
-            let datasource = GamesTableViewDataSource()
-            self.tableView.dataSource = datasource
-            self.tableView.delegate = datasource
-            self.tableView.register(UINib(nibName: "GamesTableViewCell", bundle: nil), forCellReuseIdentifier: "gamesCell")
-        case 1:
-            self.tableView.dataSource = GamesTableViewDataSource()
-        default:
-            print("")
-        }
-        
-    }
+//    public func configureForList(listType : Int){
+//        switch listType {
+//        case 0:
+//            let datasource = GamesTableViewDataSource()
+//            self.tableView.dataSource = datasource
+//            self.tableView.delegate = datasource
+//            self.tableView.register(UINib(nibName: "GamesTableViewCell", bundle: nil), forCellReuseIdentifier: "gamesCell")
+//        case 1:
+//            self.tableView.dataSource = GamesTableViewDataSource()
+//        default:
+//            print("")
+//        }
+//        
+//    }
 
 }
