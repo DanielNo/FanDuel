@@ -10,11 +10,15 @@ import UIKit
 enum ContainerSection : Int{
     case gamesSection = 0
     case statsSection = 1
-    
 }
 
 class ContainerCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-
+    @IBOutlet weak var segmentedControl: UISegmentedControl!{
+        didSet{
+            segmentedControl.addTarget(self, action: #selector(segmentedControlChanged(segControl:)), for: UIControlEvents.valueChanged)
+        }
+    }
+    
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet{
             let nib = UINib(nibName: "ListCollectionViewCell", bundle: nil)
@@ -24,17 +28,38 @@ class ContainerCollectionViewController: UIViewController, UICollectionViewDeleg
     }
     
     let listCellReuseID = "listCell"
-    let gamesDataSource = GamesTableViewDataSource()
-    let statsDataSource = StatsTableViewDataSource()
+    lazy var gamesDataSource = GamesTableViewDataSource()
+    lazy var statsDataSource = StatsTableViewDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let parser = FileParser()
-        let basketballData = parser.readFile(fileName: "basketballData", extension: "json")
+        let basketballData = parser.readFile(fileName: "basketballData", extension: "json") { (data) in
+            print(data?.teams)
+        }
     }
+    
+    @objc func segmentedControlChanged(segControl : UISegmentedControl){
+        let index = segControl.selectedSegmentIndex
+        switch index {
+        case 0:
+            collectionView.scrollToItem(at: IndexPath.init(item: 0, section: 0), at: UICollectionViewScrollPosition.left, animated: true)
+        case 1:
+            collectionView.scrollToItem(at: IndexPath.init(item: 0, section: 1), at: UICollectionViewScrollPosition.right, animated: true)
+        default:
+            collectionView.scrollToItem(at: IndexPath.init(item: 0, section: 0), at: UICollectionViewScrollPosition.top, animated: true)
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let page = Int((collectionView.contentOffset.x / collectionView.frame.size.width).rounded())
+        segmentedControl.selectedSegmentIndex = page
+    }
+    
 }
 
 extension ContainerCollectionViewController{
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
@@ -79,7 +104,6 @@ extension ContainerCollectionViewController{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
     }
-
 
 }
 

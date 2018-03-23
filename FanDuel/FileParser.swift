@@ -12,17 +12,16 @@ public class FileParser{
     
     let jsonDecoder : JSONDecoder = JSONDecoder()
     
-    func readFile(fileName: String, extension: String) -> [BasketballData]? {
+    func readFile(fileName: String, extension: String, completion: @escaping (BasketballData?) -> Void) {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 let jsonData = try jsonDecoder.decode(BasketballData.self, from: data)
-                return [jsonData]
+                completion(jsonData)
             } catch {
                 print("error reading file:\(error)")
             }
         }
-        return nil
     }
     
     

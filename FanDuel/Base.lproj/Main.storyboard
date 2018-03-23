@@ -71,6 +71,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="aNm-tu-AdB" id="QhI-Ml-iRl"/>
+                        <outlet property="segmentedControl" destination="end-ed-81k" id="SHl-2A-6h5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQE-Oy-coF" userLabel="First Responder" sceneMemberID="firstResponder"/>
