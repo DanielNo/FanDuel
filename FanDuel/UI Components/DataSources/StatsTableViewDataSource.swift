@@ -20,10 +20,11 @@ class StatsTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let games = basketballData?.games else{
+        guard let players = basketballData?.players.count else{
             return 0
         }
-        return games.count
+//        print("player rows : \(players)")
+        return players
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

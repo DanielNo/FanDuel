@@ -1,14 +1,14 @@
 //
-//  GamesTableViewCell.swift
+//  GameInProgressTableViewCell.swift
 //  FanDuel
 //
-//  Created by Daniel No on 3/21/18.
+//  Created by Daniel No on 3/23/18.
 //  Copyright © 2018 Daniel No. All rights reserved.
 //
 
 import UIKit
 
-class GamesTableViewCell: UITableViewCell {
+class GameInProgressTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

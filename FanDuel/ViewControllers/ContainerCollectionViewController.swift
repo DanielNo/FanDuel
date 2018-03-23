@@ -94,7 +94,10 @@ extension ContainerCollectionViewController{
             if let gamesDelegate = gamesDataSource{
                 cell.tableView.delegate = gamesDelegate
                 cell.tableView.dataSource = gamesDelegate
-                cell.tableView.register(UINib(nibName: "GamesTableViewCell", bundle: nil), forCellReuseIdentifier: gamesDelegate.gamesCellReuseID)
+                cell.tableView.register(UINib(nibName: "GameInProgressTableViewCell", bundle: nil), forCellReuseIdentifier: gamesDelegate.gameInProgressCellID)
+                cell.tableView.register(UINib(nibName: "GameCompletedTableViewCell", bundle: nil), forCellReuseIdentifier: gamesDelegate.gameCompletedCellID)
+                cell.tableView.register(UINib(nibName: "GameScheduledTableViewCell", bundle: nil), forCellReuseIdentifier: gamesDelegate.gameScheduledCellID)
+
             }
         case ContainerSection.statsSection:
             if let statsDelegate = statsDataSource{
