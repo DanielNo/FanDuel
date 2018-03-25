@@ -10,12 +10,15 @@ import UIKit
 
 class GameCompletedTableViewCell: UITableViewCell {
     @IBOutlet weak var centerView: TriangleView!
-    
-    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var awayTeamView: UIView!
     @IBOutlet weak var homeTeamView: UIView!
-    
+    let cornerRadius : CGFloat = 10.0
+
+    @IBOutlet weak var awayTeamName: UILabel!
+    @IBOutlet weak var awayTeamScore: UILabel!
+    @IBOutlet weak var homeTeamName: UILabel!
+    @IBOutlet weak var homeTeamScore: UILabel!
     
     
     
@@ -25,7 +28,6 @@ class GameCompletedTableViewCell: UITableViewCell {
     }
     
     func roundCorners(){
-        let cornerRadius : CGFloat = 10.0
         self.containerView.layer.cornerRadius = cornerRadius
     }
     

@@ -33,7 +33,9 @@ public struct BasketballData : Decodable{
         game_states = try values.decode([GameStates].self, forKey: CodingKeys.game_states)
         teamIDDict = Dictionary()
         for team in teams{
-            teamIDDict[team.id!] = team.name
+            if let id = team.id, let name = team.name{
+                teamIDDict[id] = team.name
+            }
             print(team)
         }
     }
@@ -101,28 +103,6 @@ struct GameStates : Decodable{
         case game_status
     }
     
-//    public init(from decoder: Decoder) throws {
-//        let values = try decoder.container(keyedBy: CodingKeys.self)
-//        id = try values.decode(Int.self, forKey: CodingKeys.id)
-//        game_id = try values.decode(Int.self, forKey: CodingKeys.game_id)
-////        home_team_score = try values.decode(Int?.self, forKey: CodingKeys.home_team_score)
-////        away_team_score = try values.decode(Int?.self, forKey: CodingKeys.away_team_score)
-//        broadcast = try values.decode(String.self, forKey: CodingKeys.broadcast)
-//        quarter = try values.decode(Int.self, forKey: CodingKeys.quarter)
-//        time_left_in_quarter = try values.decode(String.self, forKey: CodingKeys.time_left_in_quarter)
-//        
-//        do {
-////            let val = try values.decode(String.self, forKey: CodingKeys.game_status)
-////            if(val != GameStatus.final && val != GameStatus.inProgress && GameStatus.scheduled){
-////                game_status = GameStatus.invalid
-////            }
-//            game_status = try values.decode(GameStatus.self, forKey: CodingKeys.game_status)
-//        } catch let error {
-//            game_status = GameStatus.invalid
-//            print(error)
-//        }
-//        game_status = try values.decode(GameStatus.self, forKey: CodingKeys.game_status)
-//    }
 
     
     

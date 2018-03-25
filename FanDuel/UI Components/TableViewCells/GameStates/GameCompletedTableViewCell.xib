@@ -23,10 +23,10 @@
                         <rect key="frame" x="5" y="5" width="310" height="110"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOQ-bf-O6W" userLabel="Center View" customClass="TriangleView" customModule="FanDuel" customModuleProvider="target">
-                                <rect key="frame" x="95" y="0.5" width="120" height="110"/>
+                                <rect key="frame" x="80" y="0.5" width="150" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCW-SJ-fP2">
-                                        <rect key="frame" x="60.5" y="0.0" width="0.0" height="25"/>
+                                        <rect key="frame" x="75.5" y="0.0" width="0.0" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="RyT-N7-awE"/>
                                         </constraints>
@@ -35,7 +35,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFI-BX-IzR">
-                                        <rect key="frame" x="60" y="85" width="0.0" height="25"/>
+                                        <rect key="frame" x="75" y="85" width="0.0" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="nP4-fD-3J1"/>
                                         </constraints>
@@ -44,7 +44,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FINAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lct-8V-fTp">
-                                        <rect key="frame" x="37" y="25" width="46.5" height="60"/>
+                                        <rect key="frame" x="52" y="25" width="46.5" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                                     <constraint firstAttribute="bottom" secondItem="uFI-BX-IzR" secondAttribute="bottom" id="0Ki-Ya-ht3"/>
                                     <constraint firstItem="lct-8V-fTp" firstAttribute="centerX" secondItem="xOQ-bf-O6W" secondAttribute="centerX" id="EgO-7W-XgQ"/>
                                     <constraint firstItem="lct-8V-fTp" firstAttribute="top" secondItem="dCW-SJ-fP2" secondAttribute="bottom" id="SO9-Ew-jyH"/>
-                                    <constraint firstAttribute="width" constant="120" id="WBf-Ry-t3I"/>
+                                    <constraint firstAttribute="width" constant="150" id="WBf-Ry-t3I"/>
                                     <constraint firstItem="dCW-SJ-fP2" firstAttribute="centerX" secondItem="xOQ-bf-O6W" secondAttribute="centerX" id="X25-Dw-7JU"/>
                                     <constraint firstItem="dCW-SJ-fP2" firstAttribute="top" secondItem="xOQ-bf-O6W" secondAttribute="top" id="Xfx-Xd-6EQ"/>
                                     <constraint firstItem="uFI-BX-IzR" firstAttribute="top" secondItem="lct-8V-fTp" secondAttribute="bottom" id="dZa-oc-0m6"/>
@@ -64,22 +64,22 @@
                                 </constraints>
                             </view>
                             <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTw-8T-2ps" userLabel="Away Team View">
-                                <rect key="frame" x="0.0" y="0.0" width="95" height="110"/>
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Away" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74b-IO-cBd">
-                                        <rect key="frame" x="8" y="8" width="79" height="43"/>
+                                        <rect key="frame" x="8" y="8" width="64" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBx-qQ-BhS">
-                                        <rect key="frame" x="8" y="59" width="79" height="43"/>
+                                        <rect key="frame" x="8" y="59" width="64" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.33882707239999998" blue="0.89291388490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="74b-IO-cBd" firstAttribute="top" secondItem="OTw-8T-2ps" secondAttribute="top" constant="8" id="6vd-ta-0WW"/>
                                     <constraint firstAttribute="trailing" secondItem="gBx-qQ-BhS" secondAttribute="trailing" constant="8" id="Nws-Mn-BiY"/>
@@ -92,22 +92,22 @@
                                 </constraints>
                             </view>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpD-xE-sZK" userLabel="Home Team View">
-                                <rect key="frame" x="215" y="0.0" width="95" height="110"/>
+                                <rect key="frame" x="230" y="0.0" width="80" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfc-OT-tfT">
-                                        <rect key="frame" x="8" y="8" width="79" height="43"/>
+                                        <rect key="frame" x="8" y="8" width="64" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lh5-bH-dXY">
-                                        <rect key="frame" x="8" y="59" width="79" height="43"/>
+                                        <rect key="frame" x="8" y="59" width="64" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.33882707239999998" blue="0.89291388490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Wfc-OT-tfT" secondAttribute="trailing" constant="8" id="9iZ-UR-NmR"/>
                                     <constraint firstAttribute="trailing" secondItem="Lh5-bH-dXY" secondAttribute="trailing" constant="8" id="acL-ha-oQM"/>
@@ -149,9 +149,13 @@
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="bZx-SL-kRw"/>
             <connections>
+                <outlet property="awayTeamName" destination="74b-IO-cBd" id="ZC6-wu-Ba1"/>
+                <outlet property="awayTeamScore" destination="gBx-qQ-BhS" id="YHg-M9-yJR"/>
                 <outlet property="awayTeamView" destination="OTw-8T-2ps" id="9af-Sf-RQA"/>
                 <outlet property="centerView" destination="xOQ-bf-O6W" id="czq-wa-rk4"/>
                 <outlet property="containerView" destination="8XO-vI-L0v" id="djN-cF-rfn"/>
+                <outlet property="homeTeamName" destination="Wfc-OT-tfT" id="Tme-ya-2WT"/>
+                <outlet property="homeTeamScore" destination="Lh5-bH-dXY" id="eHt-ix-8jJ"/>
                 <outlet property="homeTeamView" destination="dpD-xE-sZK" id="mlW-aC-0sE"/>
             </connections>
             <point key="canvasLocation" x="-208" y="-82"/>

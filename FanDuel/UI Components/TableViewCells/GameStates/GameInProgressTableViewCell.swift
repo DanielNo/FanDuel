@@ -10,12 +10,18 @@ import UIKit
 
 class GameInProgressTableViewCell: UITableViewCell {
     @IBOutlet weak var centerView: TriangleView!
-    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var homeTeamView: UIView!
-    
     @IBOutlet weak var awayTeamView: UIView!
-    
+    let cornerRadius : CGFloat = 10.0
+
+    @IBOutlet weak var awayTeamName: UILabel!
+    @IBOutlet weak var awayTeamScore: UILabel!
+    @IBOutlet weak var homeTeamName: UILabel!
+    @IBOutlet weak var homeTeamScore: UILabel!
+    @IBOutlet weak var quarterLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var broadcastLabel: UILabel!
     
     
     
@@ -25,7 +31,6 @@ class GameInProgressTableViewCell: UITableViewCell {
     }
     
     func roundCorners(){
-        let cornerRadius : CGFloat = 10.0
         self.containerView.layer.cornerRadius = cornerRadius
     }
 

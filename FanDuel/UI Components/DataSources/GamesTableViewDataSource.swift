@@ -39,13 +39,15 @@ class GamesTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDele
             case .final:
                 let cell = tableView.dequeueReusableCell(withIdentifier: gameCompletedCellID) as! GameCompletedTableViewCell
                 cell.centerView.shape = ViewShape.rightTriangle
-//                cell.backgroundColor = UIColor.darkGray
+//                cell.awayTeamScore.text = game?.away_team_score == nil ? "" : String(game?.away_team_score!)
+//                cell.homeTeamName.text = game?.home_team_score
                 return cell
 
             case .inProgress:
                 let cell = tableView.dequeueReusableCell(withIdentifier: gameInProgressCellID) as! GameInProgressTableViewCell
                 cell.centerView.shape = ViewShape.leftTriangle
-//                cell.backgroundColor = UIColor.darkGray
+//                cell.awayTeamScore.text = game?.away_team_score
+//                cell.homeTeamName.text = game?.home_team_score
 
                 return cell
 

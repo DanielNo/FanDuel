@@ -91,7 +91,6 @@ extension ContainerCollectionViewController{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: listCellReuseID, for: indexPath as IndexPath) as! ListCollectionViewCell
-        cell.backgroundColor = UIColor.red
         let section = ContainerSection(rawValue: indexPath.section)!
         switch section {
         case ContainerSection.gamesSection:

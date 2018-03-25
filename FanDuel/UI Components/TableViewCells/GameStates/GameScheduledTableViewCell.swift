@@ -11,14 +11,21 @@ import UIKit
 class GameScheduledTableViewCell: UITableViewCell {
 
     @IBOutlet weak var centerView: TriangleView!
+    @IBOutlet weak var containerView: UIView!
+    
+    let cornerRadius : CGFloat = 10.0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.roundCorners()
+    }
+    
+    func roundCorners(){
+        self.containerView.layer.cornerRadius = cornerRadius
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame = UIEdgeInsetsInsetRect(contentView.frame, UIEdgeInsetsMake(40, 40, 40, 40))
     }
 
 
