@@ -50,8 +50,8 @@ class GameInProgressTableViewCell: UITableViewCell {
             return
         }
         if let homeID = data?.gameIDDict[gameID]?.home_team_id, let awayID = data?.gameIDDict[gameID]?.away_team_id{
-            self.homeTeamName.text = data?.teamIDDict[homeID]?.name
-            self.awayTeamName.text = data?.teamIDDict[awayID]?.name
+            self.homeTeamName.text = data?.teamNameForID(homeID)
+            self.awayTeamName.text = data?.teamNameForID(awayID)
             if let awayScore = game?.away_team_score, let homeScore = game?.home_team_score{
                 self.centerView.shape = awayScore > homeScore ? ViewShape.leftTriangle : ViewShape.rightTriangle
                 let winningTeamID = awayScore > homeScore ? awayID : homeID

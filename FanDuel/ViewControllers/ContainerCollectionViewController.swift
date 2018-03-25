@@ -103,7 +103,6 @@ extension ContainerCollectionViewController{
                 cell.tableView.register(UINib(nibName: "GameInProgressTableViewCell", bundle: nil), forCellReuseIdentifier: gamesDelegate.gameInProgressCellID)
                 cell.tableView.register(UINib(nibName: "GameCompletedTableViewCell", bundle: nil), forCellReuseIdentifier: gamesDelegate.gameCompletedCellID)
                 cell.tableView.register(UINib(nibName: "GameScheduledTableViewCell", bundle: nil), forCellReuseIdentifier: gamesDelegate.gameScheduledCellID)
-                cell.backgroundColor = UIColor.clear
                 cell.tableView.backgroundColor = UIColor.clear
 
             }
@@ -139,9 +138,6 @@ extension ContainerCollectionViewController{
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 20.0
-    }
 
 }
 
