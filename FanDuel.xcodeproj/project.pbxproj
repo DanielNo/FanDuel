@@ -19,6 +19,7 @@
 		560AC9A72062EA6300BF7769 /* GamesTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AC9A62062EA6300BF7769 /* GamesTableViewDataSource.swift */; };
 		560AC9B22062F0F700BF7769 /* StatsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560AC9B12062F0F700BF7769 /* StatsTableViewDataSource.swift */; };
 		560AC9B820630ED800BF7769 /* basketballData.json in Resources */ = {isa = PBXBuildFile; fileRef = 560AC9B720630ED800BF7769 /* basketballData.json */; };
+		56352651206869D000A5CE3D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56352650206869D000A5CE3D /* StringExtensions.swift */; };
 		5639A1C12068371100499C8B /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5639A1C02068371100499C8B /* UIColorExtensions.swift */; };
 		5639A1C520683B6100499C8B /* BasketballData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5639A1C420683B6000499C8B /* BasketballData.swift */; };
 		563DE9952064528600F7A207 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563DE9942064528500F7A207 /* TriangleView.swift */; };
@@ -70,6 +71,7 @@
 		560AC9A62062EA6300BF7769 /* GamesTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewDataSource.swift; sourceTree = "<group>"; };
 		560AC9B12062F0F700BF7769 /* StatsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsTableViewDataSource.swift; sourceTree = "<group>"; };
 		560AC9B720630ED800BF7769 /* basketballData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = basketballData.json; sourceTree = "<group>"; };
+		56352650206869D000A5CE3D /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		5639A1C02068371100499C8B /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		5639A1C420683B6000499C8B /* BasketballData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasketballData.swift; sourceTree = "<group>"; };
 		563DE9942064528500F7A207 /* TriangleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
@@ -170,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				563DE9942064528500F7A207 /* TriangleView.swift */,
-				560AC9B62062F85C00BF7769 /* DataSources */,
+				560AC9B62062F85C00BF7769 /* TableViewDataSources */,
 				560AC9B32062F81600BF7769 /* CollectionViewCells */,
 				560AC9B42062F81E00BF7769 /* TableViewCells */,
 			);
@@ -204,13 +206,13 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		560AC9B62062F85C00BF7769 /* DataSources */ = {
+		560AC9B62062F85C00BF7769 /* TableViewDataSources */ = {
 			isa = PBXGroup;
 			children = (
 				560AC9A62062EA6300BF7769 /* GamesTableViewDataSource.swift */,
 				560AC9B12062F0F700BF7769 /* StatsTableViewDataSource.swift */,
 			);
-			path = DataSources;
+			path = TableViewDataSources;
 			sourceTree = "<group>";
 		};
 		5635264F2068496A00A5CE3D /* Data */ = {
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				5639A1C02068371100499C8B /* UIColorExtensions.swift */,
+				56352650206869D000A5CE3D /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				560AC9732062C32800BF7769 /* AppDelegate.swift in Sources */,
 				56EE42D720658C78008A2600 /* GameCompletedTableViewCell.swift in Sources */,
 				56EE42E52067F585008A2600 /* DisplayUnwrapper.swift in Sources */,
+				56352651206869D000A5CE3D /* StringExtensions.swift in Sources */,
 				5639A1C520683B6100499C8B /* BasketballData.swift in Sources */,
 				56EE42D320658C5B008A2600 /* GameInProgressTableViewCell.swift in Sources */,
 			);

@@ -24,11 +24,26 @@ class StatsTableViewCell: UITableViewCell {
     }
     
     public func configureCellForGame(data : BasketballData?, indexPath : IndexPath){
-        self.topLabel.text = ""
-        self.bottomLabel.text = ""
-        self.nerdLabel.text = ""
+        guard let player = data?.players[indexPath.row] else{
+            return
+        }
+        if let name = player.name, let teamID = player.team_id{
+            if let teamName = data?.teamAbbrevForID(teamID){
+                self.topLabel.text = "\(name) - \(teamName)"
+            }
+        }
+        if let stats = data?.playerStatsForID(player.id){
+            if let assists = stats.assists, let pts = stats.points, let rebs = stats.rebounds, let nerd = stats.nerd{
+                let formattedString = NSMutableAttributedString()
+                formattedString
+                    .bold("\(pts) Pts", size: 20.0)
+                    .normal(",  \(assists) Ast, \(rebs) Reb")
+                self.bottomLabel.attributedText = formattedString
+                self.nerdLabel.text = String(nerd)
+            }
+        }
 
     }
-
+    
     
 }

@@ -16,6 +16,7 @@ public struct BasketballData : Decodable{
     let game_states : [GameStates]
     var teamIDDict : [Int : Teams]
     var gameIDDict : [Int : Games]
+    var playerStatsDict : [Int : PlayerStats]
     private enum CodingKeys: CodingKey {
         case teams
         case players
@@ -23,7 +24,6 @@ public struct BasketballData : Decodable{
         case player_stats
         case game_states
     }
-
     
     public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
@@ -34,6 +34,7 @@ public struct BasketballData : Decodable{
         game_states = try values.decode([GameStates].self, forKey: CodingKeys.game_states)
         teamIDDict = Dictionary()
         gameIDDict = Dictionary()
+        playerStatsDict = Dictionary()
         for team in teams{
             if let id = team.id{
                 teamIDDict[id] = team
@@ -44,10 +45,40 @@ public struct BasketballData : Decodable{
                 gameIDDict[id] = game
             }
         }
-
+        for player in player_stats{
+            if let id = player.id{
+                playerStatsDict[id] = player
+            }
+        }
+    }
+    
+    public func teamAbbrevForID(_ id : Int?) -> String{
+        if let idNumber = id {
+            if let name = teamIDDict[idNumber]?.abbrev{
+                return name
+            }
+        }
+        return ""
+    }
+    
+    public func teamNameForID(_ id : Int?) -> String{
+        if let idNumber = id {
+            if let name = teamIDDict[idNumber]?.name{
+                return name
+            }
+        }
+        return ""
+    }
+    
+    public func playerStatsForID(_ id : Int?) -> PlayerStats?{
+        if let idNumber = id {
+            if let stats = playerStatsDict[idNumber]{
+                return stats
+            }
+        }
+        return nil
     }
 
-    
 }
 
 struct Teams : Decodable {
@@ -63,7 +94,7 @@ struct Teams : Decodable {
 struct Players : Decodable{
     let id : Int?
     let name : String?
-    let team_id : Int
+    let team_id : Int?
 }
 
 struct Games : Decodable{
@@ -73,7 +104,7 @@ struct Games : Decodable{
     let date : String?
     
 }
-struct PlayerStats : Decodable{
+public struct PlayerStats : Decodable{
     let id : Int?
     let game_id : Int?
     let player_id : Int?
