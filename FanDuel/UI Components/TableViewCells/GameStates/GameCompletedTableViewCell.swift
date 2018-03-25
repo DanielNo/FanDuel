@@ -35,6 +35,30 @@ class GameCompletedTableViewCell: UITableViewCell {
         super.layoutSubviews()
 
     }
+    
+    public func configureCellForGame(data : BasketballData?, indexPath : IndexPath){
+        
+        let gameStates = data?.game_states
+        let game = gameStates?[indexPath.row]
+        
+        let gameID = game?.game_id
+        if let homeID = data?.gameIDDict[gameID!]?.home_team_id, let awayID = data?.gameIDDict[gameID!]?.away_team_id{
+            self.homeTeamName.text = data?.teamIDDict[homeID]?.name
+            self.awayTeamName.text = data?.teamIDDict[awayID]?.name
+            if let awayScore = game?.away_team_score, let homeScore = game?.home_team_score{
+                self.centerView.shape = awayScore > homeScore ? ViewShape.leftTriangle : ViewShape.rightTriangle
+                let winningTeamID = awayScore > homeScore ? awayID : homeID
+                if let colorString = data?.teamIDDict[winningTeamID]?.color{
+                    let winningColor = UIColor.colorFromHex(hex: colorString)
+                    self.centerView.fillColor = winningColor
+                }
+            }
+
+        }
+        self.awayTeamScore.text = DisplayUnwrapper.displayValue(variable: game?.away_team_score)
+        self.homeTeamScore.text = DisplayUnwrapper.displayValue(variable: game?.home_team_score)
+    }
+
 
 
     override func setSelected(_ selected: Bool, animated: Bool) {

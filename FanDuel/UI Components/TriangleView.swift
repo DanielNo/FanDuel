@@ -31,6 +31,8 @@ class TriangleView : UIView {
         }
     }
     
+    var fillColor : UIColor = UIColor.white
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -73,7 +75,7 @@ class TriangleView : UIView {
         context.addLine(to: CGPoint(x: rect.maxX/8 * 7, y:rect.minY))
         context.addLine(to: CGPoint(x: rect.maxX/3, y:rect.minY ))
         context.closePath()
-        context.setFillColor(UIColor.orange.cgColor)
+        context.setFillColor(self.fillColor.cgColor)
         context.fillPath()
 
     }
@@ -90,7 +92,7 @@ class TriangleView : UIView {
         context.addLine(to: CGPoint(x: rect.maxX/8, y:rect.maxY))
         context.addLine(to: CGPoint(x: rect.maxX/8, y:rect.minY ))
         context.closePath()
-        context.setFillColor(UIColor.orange.cgColor)
+        context.setFillColor(self.fillColor.cgColor)
         context.fillPath()
 
     }
@@ -104,7 +106,7 @@ class TriangleView : UIView {
         context.addLine(to: CGPoint(x: rect.maxX/8 * 7, y:rect.minY))
         context.move(to: CGPoint(x: rect.maxX/8, y:rect.minY ))
         context.closePath()
-        context.setFillColor(red: 1.0, green: 0.5, blue: 0.0, alpha: 0.60)
+        context.setFillColor(self.fillColor.cgColor)
         context.fillPath()
     }
     

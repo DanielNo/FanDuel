@@ -38,22 +38,19 @@ class GamesTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDele
             switch status {
             case .final:
                 let cell = tableView.dequeueReusableCell(withIdentifier: gameCompletedCellID) as! GameCompletedTableViewCell
-                cell.centerView.shape = ViewShape.rightTriangle
-//                cell.awayTeamScore.text = game?.away_team_score == nil ? "" : String(game?.away_team_score!)
-//                cell.homeTeamName.text = game?.home_team_score
+                cell.configureCellForGame(data: basketballData, indexPath: indexPath)
                 return cell
 
             case .inProgress:
                 let cell = tableView.dequeueReusableCell(withIdentifier: gameInProgressCellID) as! GameInProgressTableViewCell
-                cell.centerView.shape = ViewShape.leftTriangle
-//                cell.awayTeamScore.text = game?.away_team_score
-//                cell.homeTeamName.text = game?.home_team_score
-
+                cell.configureCellForGame(data: basketballData, indexPath: indexPath)
                 return cell
 
             case .scheduled:
                 let cell = tableView.dequeueReusableCell(withIdentifier: gameScheduledCellID) as! GameScheduledTableViewCell
                 cell.centerView.shape = ViewShape.box
+                cell.centerView.fillColor = UIColor.GamesColors.scheduledGame
+                cell.configureCellForGame(data: basketballData, indexPath: indexPath)
                 return cell
 
             default:

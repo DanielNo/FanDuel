@@ -23,8 +23,6 @@ class GameInProgressTableViewCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var broadcastLabel: UILabel!
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.roundCorners()
@@ -44,4 +42,56 @@ class GameInProgressTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    public func configureCellForGame(data : BasketballData?, indexPath : IndexPath){
+        let gameStates = data?.game_states
+        let game = gameStates?[indexPath.row]
+
+        let gameID = game?.game_id
+        if let homeID = data?.gameIDDict[gameID!]?.home_team_id, let awayID = data?.gameIDDict[gameID!]?.away_team_id{
+            self.homeTeamName.text = data?.teamIDDict[homeID]?.name
+            self.awayTeamName.text = data?.teamIDDict[awayID]?.name
+            if let awayScore = game?.away_team_score, let homeScore = game?.home_team_score{
+                self.centerView.shape = awayScore > homeScore ? ViewShape.leftTriangle : ViewShape.rightTriangle
+                let winningTeamID = awayScore > homeScore ? awayID : homeID
+                if let colorString = data?.teamIDDict[winningTeamID]?.color{
+                    let winningColor = UIColor.colorFromHex(hex: colorString)
+                    self.centerView.fillColor = winningColor
+                }
+            }
+
+        }
+
+        self.awayTeamScore.text = DisplayUnwrapper.displayValue(variable: game?.away_team_score)
+        self.homeTeamScore.text = DisplayUnwrapper.displayValue(variable: game?.home_team_score)
+        if let quarter = game?.quarter{
+            self.quarterLabel.text = QuarterString(rawValue:quarter)?.description
+        }
+        self.broadcastLabel.text = game?.broadcast
+        self.timeLabel.text = game?.time_left_in_quarter
+    }
+    
 }
+
+enum QuarterString : Int, CustomStringConvertible  {
+    case first = 1
+    case second = 2
+    case third = 3
+    case fourth = 4
+    
+    var description: String {
+        switch self {
+        case .first:
+            return "1st"
+        case .second:
+            return "2nd"
+        case .third:
+            return "3rd"
+        case .fourth:
+            return "4th"
+        default:
+            return ""
+        }
+    }
+}
+
+

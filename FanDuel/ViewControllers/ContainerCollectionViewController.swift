@@ -17,6 +17,7 @@ class ContainerCollectionViewController: UIViewController, UICollectionViewDeleg
     @IBOutlet weak var segmentedControl: UISegmentedControl!{
         didSet{
             segmentedControl.addTarget(self, action: #selector(segmentedControlChanged(segControl:)), for: UIControlEvents.valueChanged)
+            segmentedControl.tintColor = UIColor.GamesColors.segmentedTint
         }
     }
     
@@ -42,10 +43,8 @@ class ContainerCollectionViewController: UIViewController, UICollectionViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(UIScreen.main.bounds.width)
-        print(self.collectionView.bounds.width)
         self.loadData()
+        self.setupUI()
     }
     
     func loadData(){
@@ -55,6 +54,10 @@ class ContainerCollectionViewController: UIViewController, UICollectionViewDeleg
             }
             self?.data = jsonData
         }
+    }
+    
+    func setupUI(){
+        self.view.backgroundColor = UIColor.GamesColors.darkGrayBackground
     }
     
     @objc func segmentedControlChanged(segControl : UISegmentedControl){

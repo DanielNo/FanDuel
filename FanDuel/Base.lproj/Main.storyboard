@@ -54,7 +54,6 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NEY-nS-vwf" firstAttribute="trailing" secondItem="aNm-tu-AdB" secondAttribute="trailing" id="1fS-8d-sj2"/>
                             <constraint firstItem="aNm-tu-AdB" firstAttribute="centerX" secondItem="NEY-nS-vwf" secondAttribute="centerX" id="2Qa-aG-Z8t"/>

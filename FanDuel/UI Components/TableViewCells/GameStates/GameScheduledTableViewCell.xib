@@ -149,8 +149,14 @@
             <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="Eae-aP-fv7"/>
             <connections>
+                <outlet property="awayTeamName" destination="15l-z6-Os0" id="TLA-Ee-xLY"/>
+                <outlet property="awayTeamStats" destination="kIr-y7-0ru" id="XZJ-ZE-gQR"/>
+                <outlet property="broadcastLabel" destination="7fP-0R-RLB" id="l9X-QD-33d"/>
                 <outlet property="centerView" destination="sY8-6y-WMW" id="5PO-rf-7zl"/>
                 <outlet property="containerView" destination="qfq-gH-Ub0" id="hHH-rq-EEH"/>
+                <outlet property="homeTeamName" destination="0II-sq-x2V" id="hD4-aA-dSU"/>
+                <outlet property="homeTeamStats" destination="44Q-yi-EyA" id="Cyl-tx-gqC"/>
+                <outlet property="timeLabel" destination="OZr-cW-k5M" id="8jY-be-pZZ"/>
             </connections>
             <point key="canvasLocation" x="-208" y="-82"/>
         </tableViewCell>
