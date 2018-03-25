@@ -30,6 +30,7 @@
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aNm-tu-AdB">
                                 <rect key="frame" x="0.0" y="61" width="414" height="675"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="LTU-YY-nE9">
                                     <size key="itemSize" width="414" height="640"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -53,7 +54,7 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NEY-nS-vwf" firstAttribute="trailing" secondItem="aNm-tu-AdB" secondAttribute="trailing" id="1fS-8d-sj2"/>
                             <constraint firstItem="aNm-tu-AdB" firstAttribute="centerX" secondItem="NEY-nS-vwf" secondAttribute="centerX" id="2Qa-aG-Z8t"/>
@@ -63,8 +64,6 @@
                             <constraint firstItem="aNm-tu-AdB" firstAttribute="bottom" secondItem="NEY-nS-vwf" secondAttribute="bottom" id="Jjz-e4-H7q"/>
                             <constraint firstItem="aNm-tu-AdB" firstAttribute="leading" secondItem="NEY-nS-vwf" secondAttribute="leading" id="KsY-At-JEu"/>
                             <constraint firstItem="NEY-nS-vwf" firstAttribute="trailing" secondItem="end-ed-81k" secondAttribute="trailing" id="MVN-2x-VoB"/>
-                            <constraint firstItem="aNm-tu-AdB" firstAttribute="trailing" secondItem="NEY-nS-vwf" secondAttribute="trailing" id="hUY-nz-9m5"/>
-                            <constraint firstItem="aNm-tu-AdB" firstAttribute="leading" secondItem="NEY-nS-vwf" secondAttribute="leading" id="pT2-mY-NpE"/>
                             <constraint firstItem="end-ed-81k" firstAttribute="centerX" secondItem="NEY-nS-vwf" secondAttribute="centerX" id="tQ3-a8-yb6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NEY-nS-vwf"/>

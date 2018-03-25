@@ -91,6 +91,7 @@ extension ContainerCollectionViewController{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: listCellReuseID, for: indexPath as IndexPath) as! ListCollectionViewCell
+        cell.backgroundColor = UIColor.red
         let section = ContainerSection(rawValue: indexPath.section)!
         switch section {
         case ContainerSection.gamesSection:
@@ -100,6 +101,8 @@ extension ContainerCollectionViewController{
                 cell.tableView.register(UINib(nibName: "GameInProgressTableViewCell", bundle: nil), forCellReuseIdentifier: gamesDelegate.gameInProgressCellID)
                 cell.tableView.register(UINib(nibName: "GameCompletedTableViewCell", bundle: nil), forCellReuseIdentifier: gamesDelegate.gameCompletedCellID)
                 cell.tableView.register(UINib(nibName: "GameScheduledTableViewCell", bundle: nil), forCellReuseIdentifier: gamesDelegate.gameScheduledCellID)
+                cell.backgroundColor = UIColor.clear
+                cell.tableView.backgroundColor = UIColor.clear
 
             }
         case ContainerSection.statsSection:
@@ -116,8 +119,17 @@ extension ContainerCollectionViewController{
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = CGSize(width: self.view.frame.size.width, height: self.collectionView.frame.size.height)
-        print(size)
+        var size : CGSize
+        switch indexPath.section {
+        case 0:
+            size = CGSize(width: self.collectionView.frame.size.width, height: self.collectionView.frame.size.height)
+        case 1:
+            size = CGSize(width: self.collectionView.frame.size.width, height: self.collectionView.frame.size.height)
+
+        default:
+            size = CGSize(width: self.view.frame.size.width, height: self.collectionView.frame.size.height)
+        }
+        
         return size
     }
     
@@ -126,7 +138,7 @@ extension ContainerCollectionViewController{
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0.0
+        return 20.0
     }
 
 }

@@ -24,7 +24,6 @@ class GamesTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDele
         guard let games = basketballData?.game_states else{
          return 0
         }
-//        print("game rows : \(games)")
         return games.count
     }
     
@@ -39,13 +38,15 @@ class GamesTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDele
             switch status {
             case .final:
                 let cell = tableView.dequeueReusableCell(withIdentifier: gameCompletedCellID) as! GameCompletedTableViewCell
-                cell.layer.cornerRadius = 5
                 cell.centerView.shape = ViewShape.rightTriangle
+//                cell.backgroundColor = UIColor.darkGray
                 return cell
 
             case .inProgress:
                 let cell = tableView.dequeueReusableCell(withIdentifier: gameInProgressCellID) as! GameInProgressTableViewCell
                 cell.centerView.shape = ViewShape.leftTriangle
+//                cell.backgroundColor = UIColor.darkGray
+
                 return cell
 
             case .scheduled:
@@ -60,13 +61,10 @@ class GamesTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDele
         }
         return UITableViewCell()
     }
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 20.0
-    }
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 81.0
+        return 120.0
     }
     
 }
