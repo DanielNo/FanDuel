@@ -39,8 +39,10 @@ class GameScheduledTableViewCell: UITableViewCell {
         let gameStates = data?.game_states
         let game = gameStates?[indexPath.row]
         
-        let gameID = game?.game_id
-        if let homeID = data?.gameIDDict[gameID!]?.home_team_id, let awayID = data?.gameIDDict[gameID!]?.away_team_id{
+        guard let gameID = game?.game_id else{
+         return
+        }
+        if let homeID = data?.gameIDDict[gameID]?.home_team_id, let awayID = data?.gameIDDict[gameID]?.away_team_id{
             self.homeTeamName.text = data?.teamIDDict[homeID]?.name
             self.homeTeamStats.text = data?.teamIDDict[homeID]?.record
             self.awayTeamName.text = data?.teamIDDict[awayID]?.name
@@ -48,7 +50,7 @@ class GameScheduledTableViewCell: UITableViewCell {
         }
         
         self.broadcastLabel.text = game?.broadcast
-        self.timeLabel.text = ""
+        self.timeLabel.text = data?.gameIDDict[gameID]?.date
     }
 
 

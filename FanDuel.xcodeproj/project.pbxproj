@@ -133,7 +133,7 @@
 		560AC9712062C32800BF7769 /* FanDuel */ = {
 			isa = PBXGroup;
 			children = (
-				5639A1C420683B6000499C8B /* BasketballData.swift */,
+				5635264F2068496A00A5CE3D /* Data */,
 				5639A1BF206836FC00499C8B /* Extensions */,
 				5639A1BE206836D400499C8B /* Utility */,
 				560AC9B52062F83300BF7769 /* ViewControllers */,
@@ -211,6 +211,14 @@
 				560AC9B12062F0F700BF7769 /* StatsTableViewDataSource.swift */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		5635264F2068496A00A5CE3D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5639A1C420683B6000499C8B /* BasketballData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		5639A1BE206836D400499C8B /* Utility */ = {

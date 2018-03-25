@@ -9,7 +9,9 @@
 import UIKit
 
 class StatsTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var bottomLabel: UILabel!
+    @IBOutlet weak var nerdLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +22,13 @@ class StatsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    public func configureCellForGame(data : BasketballData?, indexPath : IndexPath){
+        self.topLabel.text = ""
+        self.bottomLabel.text = ""
+        self.nerdLabel.text = ""
+
+    }
+
     
 }

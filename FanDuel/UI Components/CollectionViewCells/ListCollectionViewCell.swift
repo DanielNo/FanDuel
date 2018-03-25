@@ -13,8 +13,6 @@ class ListCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("awake from nib")
-        // Initialization code
     }
     
     public func setDataSource(dataSource : UITableViewDataSource){

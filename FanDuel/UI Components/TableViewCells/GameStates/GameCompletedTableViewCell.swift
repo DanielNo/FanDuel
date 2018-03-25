@@ -41,8 +41,10 @@ class GameCompletedTableViewCell: UITableViewCell {
         let gameStates = data?.game_states
         let game = gameStates?[indexPath.row]
         
-        let gameID = game?.game_id
-        if let homeID = data?.gameIDDict[gameID!]?.home_team_id, let awayID = data?.gameIDDict[gameID!]?.away_team_id{
+        guard let gameID = game?.game_id else{
+            return
+        }
+        if let homeID = data?.gameIDDict[gameID]?.home_team_id, let awayID = data?.gameIDDict[gameID]?.away_team_id{
             self.homeTeamName.text = data?.teamIDDict[homeID]?.name
             self.awayTeamName.text = data?.teamIDDict[awayID]?.name
             if let awayScore = game?.away_team_score, let homeScore = game?.home_team_score{

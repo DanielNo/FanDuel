@@ -31,8 +31,13 @@ class StatsTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDele
         return 1
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 65.0
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: statsCellReuseID) as! StatsTableViewCell
+        cell.configureCellForGame(data: basketballData, indexPath: indexPath)
         return cell
     }
     
