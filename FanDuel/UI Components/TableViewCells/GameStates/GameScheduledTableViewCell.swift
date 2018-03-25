@@ -10,6 +10,7 @@ import UIKit
 
 class GameScheduledTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var centerView: TriangleView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

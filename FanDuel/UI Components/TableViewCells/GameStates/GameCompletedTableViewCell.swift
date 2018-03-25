@@ -9,7 +9,8 @@
 import UIKit
 
 class GameCompletedTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var centerView: TriangleView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

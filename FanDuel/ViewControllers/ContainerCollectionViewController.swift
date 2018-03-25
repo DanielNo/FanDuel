@@ -42,6 +42,9 @@ class ContainerCollectionViewController: UIViewController, UICollectionViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(UIScreen.main.bounds.width)
+        print(self.collectionView.bounds.width)
         self.loadData()
     }
     

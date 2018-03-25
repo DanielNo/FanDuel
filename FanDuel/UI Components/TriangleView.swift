@@ -16,14 +16,25 @@ public enum ViewShape {
 
 class TriangleView : UIView {
     var shape : ViewShape! {
-        didSet{
+        willSet{
+            switch newValue {
+            case .leftTriangle:
+                self.drawLeftShape(self.frame)
+            case .rightTriangle:
+                self.drawRightShape(self.frame)
+            case .box:
+                self.drawBox(self.frame)
+            default:
+                print("")
+            }
+            
         }
     }
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.shape = ViewShape.box
-        self.backgroundColor = UIColor.clear
     }
     
     public convenience init(frame: CGRect, shape : ViewShape) {
@@ -58,11 +69,11 @@ class TriangleView : UIView {
         context.addLine(to: CGPoint(x: rect.minX, y:rect.maxY/2))
         context.addLine(to: CGPoint(x: rect.maxX/8, y:rect.maxY/3 * 2))
         context.addLine(to: CGPoint(x: rect.maxX/8, y:rect.maxY))
-        context.addLine(to: CGPoint(x: rect.maxX, y:rect.maxY))
-        context.addLine(to: CGPoint(x: rect.maxX, y:rect.minY))
+        context.addLine(to: CGPoint(x: rect.maxX/8 * 7, y:rect.maxY))
+        context.addLine(to: CGPoint(x: rect.maxX/8 * 7, y:rect.minY))
         context.addLine(to: CGPoint(x: rect.maxX/3, y:rect.minY ))
         context.closePath()
-        context.setFillColor(red: 1.0, green: 0.5, blue: 0.0, alpha: 0.60)
+        context.setFillColor(UIColor.orange.cgColor)
         context.fillPath()
 
     }
@@ -70,16 +81,16 @@ class TriangleView : UIView {
     func drawRightShape(_ rect: CGRect){
         guard let context = UIGraphicsGetCurrentContext() else { return }
         context.beginPath()
-        context.move(to: CGPoint(x: rect.minX, y:rect.minY ))
+        context.move(to: CGPoint(x: rect.maxX/8, y:rect.minY ))
         context.addLine(to: CGPoint(x: rect.maxX/8 * 7, y:rect.minY ))
         context.addLine(to: CGPoint(x: rect.maxX/8 * 7, y:rect.maxY/3 ))
         context.addLine(to: CGPoint(x: rect.maxX, y:rect.maxY/2))
         context.addLine(to: CGPoint(x: rect.maxX/8 * 7, y:rect.maxY/3 * 2))
         context.addLine(to: CGPoint(x: rect.maxX/8 * 7, y:rect.maxY))
-        context.addLine(to: CGPoint(x: rect.minX, y:rect.maxY))
-        context.addLine(to: CGPoint(x: rect.minX, y:rect.minY ))
+        context.addLine(to: CGPoint(x: rect.maxX/8, y:rect.maxY))
+        context.addLine(to: CGPoint(x: rect.maxX/8, y:rect.minY ))
         context.closePath()
-        context.setFillColor(red: 1.0, green: 0.5, blue: 0.0, alpha: 0.60)
+        context.setFillColor(UIColor.orange.cgColor)
         context.fillPath()
 
     }

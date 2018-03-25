@@ -33,26 +33,40 @@ class GamesTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        if let status = basketballData?.game_states[indexPath.row].game_status{
+        let gameStates = basketballData?.game_states
+        let game = gameStates?[indexPath.row]
+        if let status = game?.game_status{
             switch status {
             case .final:
-                cell = tableView.dequeueReusableCell(withIdentifier: gameCompletedCellID) as! GameCompletedTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: gameCompletedCellID) as! GameCompletedTableViewCell
+                cell.layer.cornerRadius = 5
+                cell.centerView.shape = ViewShape.rightTriangle
+                return cell
 
             case .inProgress:
-                cell = tableView.dequeueReusableCell(withIdentifier: gameInProgressCellID) as! GameInProgressTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: gameInProgressCellID) as! GameInProgressTableViewCell
+                cell.centerView.shape = ViewShape.leftTriangle
+                return cell
 
             case .scheduled:
-                cell = tableView.dequeueReusableCell(withIdentifier: gameScheduledCellID) as! GameScheduledTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: gameScheduledCellID) as! GameScheduledTableViewCell
+                cell.centerView.shape = ViewShape.box
+                return cell
 
             default:
                 print("")
             }
 
         }
-        
-        
-        return cell
+        return UITableViewCell()
+    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 20.0
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 81.0
     }
     
 }
